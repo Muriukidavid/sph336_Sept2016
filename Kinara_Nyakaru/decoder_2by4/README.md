@@ -1,4 +1,4 @@
-This is a 2-by-4 decoder example, which is a makefile project and so no need for an IDE. 
+This is a 2-by-4 decoder, which is a makefile project. 
 Just cd into this folder and run the command 
 
     make decoder
@@ -11,17 +11,17 @@ In the following truth table, the output D0 is high when both inputs are zero,  
 <br>
 Its truth table: 
 <p align="left">
-  <img src="truth_table.png" width="1152"/>
+  <img src="Truth table.png" width="1152"/>
 </p>
 
 ###Circuit:
 <p align="left">
-  <img src="circuit.gif" width="462"/>
+  <img src="circuit.png" width="462"/>
 </p>
 
 Model of computation:
 <p align="left">
-  <img src="MoC.png" width="1152"/>
+  <img src="moc.png" width="1600"/>
 </p>
 Results:
 The above MOC was implemented in systemc (code in this folder) and the following output found from traced signals.<br>
