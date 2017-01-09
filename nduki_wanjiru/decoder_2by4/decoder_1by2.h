@@ -7,15 +7,16 @@ SC_MODULE(decoder){
 //input and output ports
 sc_in<bool> a;
 sc_out<bool> b,c;
-//constructor: where the processes are bound to simulation kernel
+//constructor:
 SC_CTOR(decoder){
 	SC_METHOD(decode);
 	sensitive<<a;
 	//dont_initialize();
 }
 
+//deconstructor
 ~decoder(){
-//delete stuff :P
+
 }
 
 void decode(void){

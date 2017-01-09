@@ -1,9 +1,4 @@
-/*
- * decoder_1by2.cc
- *
- *  Created on: Oct 28, 2016
- *      Author: karibe
- */
+
 #include"decoder_1by2.h"
 #include"driver.h"
 #include"monitor.h"
