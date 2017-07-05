@@ -1,0 +1,49 @@
+GROUP4 :PUSHBUTTON LAB REPORT
+MATHEW NG’ANG’A  I39/30422/2015
+SAMUEL KIMATHI     I39/36074/2013
+BENSON MWINGA      I39/2212/2013
+AMOS OMWOYO        I39/2294/2015
+
+INTRODUCTION
+Push button is a very useful component in our daily lives and electronics industry in general. This button has been used in cars for testing to start, stop or put cars in configuration mode. Apart from cars it has also been extensively applied in cell phones,microwaves ovens, television remotes and computer keyboards.
+
+OBJECTIVES
+ GPIO configurations
+pushbutton Interface configuration 
+Implementation and testing
+
+
+THEORETICAL BACKGROUND: PUSHBUTTON
+A pushbutton is a component  that control some aspect of a machine  or connect two points in a circuit when you press it. Example it turns on the LED when you press the button.
+The  TWR-K60N512 KIT has three three pushbuttons SW1 ,SW2 and SW3(reset) there respective port pin are:PTA19,PTE26,RESET_b
+
+MATERIALS USED
+
+G edit for editing the code. ARM GNU C compiler tools for building the binary, the ARM GNU debugger for loading the binary and debugging the application. The NXP TWR-K60N512 KIT for testing the application and a computer with Linux operating
+ system.
+
+GPIOA   AND PUSHBUTTON CONFIGURATON
+Multiplexing(MUX) since one pin may be  used as a general input pin may also have the ability to power a LED, or do numerous other things. for pin A 19 we set  multiplexing control to Alternative 1) which is noted to be GPIO and then masks it with Drive strength enable giving he pin ability to drive the current necessary to light the LED’s
+Then we enabled the interrupt handler IRQC 
+
+ NVIC holds power over peripheral interrupts for the processor. It enables them, it handles them, it can queue them if they are called at the same time, and it can assign different priorities to interrupts .We configured NVIC_ISER (Interrupt Set-Enable Register to enable interrupts coming from port A 19
+
+Port Data Direction  Register(PDDR)  configures  individual port pin to input or output . By default state direction of all pins in a port is for input. However in order to send power out to a LEDs we configured our pins to be output
+
+IMPLEMENTATION
+We implemented our code by compiling it and testing it with a NXP TWR-K60N512 KIT. 
+
+TEST AND RESULTS 
+ We have used the NXP TWR-K60N512 KIT to test our code. 
+ When we compile our code and press the button SW1 the LEDs E1,E2,E3 toggles.
+
+
+
+CONCLUSION
+ In conclusion we were able to achieve our objectives, because we were able to configure the GPIO and pushbutton interface such that when button SW1 was pressed the LEDs  E1,E2 and E3 toggled.
+
+REFERENCES
+ k60n512_quick_ref_guide_KQRUG_pdf
+TWR-K60N512-UM_pdf
+k60pi44m100sf2rm.pdf
+

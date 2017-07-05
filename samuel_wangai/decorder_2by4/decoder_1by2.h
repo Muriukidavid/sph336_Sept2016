@@ -2,9 +2,11 @@
  * decoder_1by2.h
  *
  *  Created on: Oct 28, 2016
- *      Author: odidi
+ *      Author: karibe
  */
 
+#ifndef DECODER_1BY2_H_
+#define DECODER_1BY2_H_
 #include<systemc.h>
 
 SC_MODULE(decoder){
@@ -29,3 +31,6 @@ void decode(void){
 };
 
 
+
+
+#endif /* DECODER_1BY2_H_ */
